@@ -9,13 +9,17 @@ public class Alice {
         String lowercaseExcerpt = excerpt.toLowerCase();
         System.out.println("What term would you like to search? ");
         String search = (input.nextLine()).toLowerCase();
-        int index = excerpt.indexOf(search);
+        int index = lowercaseExcerpt.indexOf(search);
         int length = search.length();
         if (lowercaseExcerpt.contains(search)){
-            System.out.println(excerpt.charAt(0));
             System.out.println("The excerpt contains the search term. The first instance is at index " + index + ". The search term is " + length + " characters long.");
-            String modifiedExcerpt = excerpt.replace(search, "");
-            System.out.println(modifiedExcerpt);
+            if (search.equals("alice")){
+                String modifiedExcerpt = excerpt.replace("Alice", "");
+                System.out.println(modifiedExcerpt);
+            } else {
+                String modifiedExcerpt = excerpt.replace(search, "");
+                System.out.println(modifiedExcerpt);
+            }
         } else {
             System.out.println("The search term was not found within the excerpt.");
         }
