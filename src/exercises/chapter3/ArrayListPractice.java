@@ -32,7 +32,7 @@ public class ArrayListPractice {
         for (Integer i: arr){
             if (i%2 == 0){
                 sumNums += i;
-            } else;
+            }
         }
         return sumNums;
     }
